@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>响应式图片</title>
+    <style>
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>响应式图像</h2>
+      <ul>
+        <li>设备宽度不超过799 显示橘猫</li>
+        <li>设备宽度超过800 显示小猫</li>
+      </ul>
+      <picture>
+        <source media="(max-width: 799px)" srcset="./assets/orange-cat.jpg" />
+        <source media="(min-width: 800px)" srcset="./assets/cat.webp" />
+        <img src="./assets/cat.webp" alt="猫" />
+      </picture>
+      <section>
+        <h2>图像大小</h2>
+        <ul>
+          <li>在dpr为1宽度不超过600像素的设备，图像显示橘猫</li>
+          <li>在dpr为1宽度超过600像素的设备，图像显示小猫猫</li>
+        </ul>
+        <p>
+          srcset属性：srcset属性用来指定多张图像，适应不同像素密度的屏幕。它的值是一个逗号分隔的字符串，每个部分都是一张图像的
+          URL，后面接一个空格，然后是像素密度的描述符或宽度描述符 如 300w 描述宽度为300的图片
+        </p>
+        <img
+          srcset="./assets/cat.webp 720w, ./assets/orange-cat.jpg 300w"
+          sizes="(max-width: 720px) 50vw,
+        (min-width: 721px) 100vw"
+          src="./assets/cat2.jpg"
+          alt="猫"
+        />
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>布局实现</title>
+    <style>
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 20px;
+      }
+
+      li {
+        display: flex;
+        justify-content: center;
+        padding: 10px 16px;
+        background-color: #f7f7f7;
+        border: 1px solid #f7f7f7;
+        border-radius: 20px;
+        gap: 10px;
+      }
+
+      .selected {
+        background: #f7fdfd;
+        color: #28cccc;
+        font-weight: 600;
+        border: 1px solid #28cccc;
+      }
+      span{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="container">
+        <li class="selected">施耐德</li>
+        <li><span>西门子</span></li>
+        <li><span>ABB</span></li>
+        <li><span>常熟</span></li>
+        <li><span>上海人民</span></li>
+        <li><span>德力西</span></li>
+        <li><span>天正电气</span></li>
+        <li><span>环宇</span></li>
+        <li><span>杭电电气</span></li>
+        <li><span>上海华通</span></li>
+        <li><span>伊顿</span></li>
+        <li><span>罗格朗</span></li>
+        <li><span>凯帆</span></li>
+        <li><span>天逸</span></li>
+        <li>
+          <span>菲尼克斯电气电气</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
